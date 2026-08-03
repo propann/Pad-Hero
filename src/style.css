@@ -1,1 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@600;800&display=swap');:root{font-family:'Space Mono',monospace;color:#e9e7df;background:#111310}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 10%,#263b29 0,transparent 30%),#111310}main{max-width:1180px;margin:auto;padding:42px 32px}header{display:flex;justify-content:space-between;gap:30px;align-items:start}.eyebrow{color:#9ee86a;font-size:11px;letter-spacing:2px}h1{font:800 clamp(48px,9vw,100px)/.85 Syne;margin:22px 0 18px;letter-spacing:-5px}h1 span{color:#9ee86a}p{color:#9d9e94;max-width:560px}.connect,.start{border:1px solid #536651;background:#1c251b;color:#b9f58c;padding:15px 18px;font:inherit;cursor:pointer}.hud{display:flex;align-items:center;gap:28px;border-block:1px solid #30362d;margin:48px 0 28px;padding:20px 0}.hud div{display:grid;gap:7px}.hud small{color:#777d70;font-size:10px}.hud strong{font-size:19px}.start{margin-left:auto;background:#9ee86a;color:#152013;font-weight:bold}.green,.perfect{color:#9ee86a}.yellow,.good{color:#ffd66b}.red,.miss{color:#ff7166}.play{position:relative;height:220px;border:1px solid #30362d;overflow:hidden;background:repeating-linear-gradient(90deg,transparent 0 24.5%,#242b23 25% 25.15%)}.lane{display:flex;height:100%;align-items:center;justify-content:space-around}.hit{height:100%;width:12.5%;border-left:1px solid #30362d;display:flex;flex-direction:column;align-items:center;justify-content:space-around;color:#737b6e}.hit b{font-size:30px;color:#4f6849}.hit.active b{color:#fff;background:#9ee86a;border-radius:50%;box-shadow:0 0 25px #9ee86a;padding:10px;color:#152013}.target{position:absolute;bottom:0;left:0;right:0;text-align:center;background:#9ee86a;color:#152013;font-size:10px;padding:5px;font-weight:bold}.target strong{margin-left:20px}.pads{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}.pads button{height:100px;background:#20271f;color:#dbded4;border:1px solid #3e4b3b;text-align:left;padding:12px;cursor:pointer;font:700 13px 'Space Mono'}.pads button:hover,.pads .kick{border-color:#9ee86a}.pads b{display:block;color:#777d70;font-size:10px}.pads em{display:block;color:#777d70;font-style:normal;font-size:9px;margin-top:18px}footer{display:flex;justify-content:space-between;color:#687061;font-size:10px;margin-top:40px}@media(max-width:700px){main{padding:24px 16px}header{display:block}.connect{margin-top:20px;width:100%}.hud{gap:12px;flex-wrap:wrap}.hud .start{width:100%;margin:0}.pads{grid-template-columns:repeat(2,1fr)}footer{display:grid;gap:8px}}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Space Mono', monospace;
+  color: #1A1A1A;
+  background: #E6E4DF;
+  color-scheme: light;
+  --ko-beige: #E6E4DF;
+  --ko-panel: #DEDCD6;
+  --ko-orange: #FF4400;
+  --ko-black: #1A1A1A;
+  --ko-amber: #FFB000;
+  --ko-muted: #8E8D88;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(rgba(26,26,26,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,26,26,.045) 1px, transparent 1px),
+    var(--ko-beige);
+  background-size: 24px 24px;
+}
+button { font: inherit; }
+main { max-width: 1180px; margin: auto; padding: 42px 32px; }
+header { display:flex; justify-content:space-between; gap:30px; align-items:start; }
+.eyebrow { color: var(--ko-orange); font-size:11px; letter-spacing:2px; font-weight:700; }
+h1 { font-size:clamp(48px,9vw,100px); line-height:.85; margin:22px 0 18px; letter-spacing:-5px; }
+h1 span { color: var(--ko-orange); }
+p { color:#55534f; max-width:560px; }
+.connect,.start {
+  border:1px solid var(--ko-black);
+  background:var(--ko-panel);
+  color:var(--ko-black);
+  padding:15px 18px;
+  cursor:pointer;
+  box-shadow:4px 4px 0 var(--ko-black);
+}
+.connect:hover,.start:hover { background:var(--ko-orange); color:#fff; }
+.hud {
+  display:flex; align-items:center; gap:28px; flex-wrap:wrap;
+  border-block:1px solid var(--ko-black); margin:48px 0 28px; padding:20px 0;
+}
+.hud div { display:grid; gap:7px; }
+.hud small { color:#65625d; font-size:10px; }
+.hud strong { font-size:19px; }
+.start { margin-left:auto; background:var(--ko-orange); color:#fff; font-weight:bold; }
+.green,.perfect { color:#08783d; }
+.yellow,.good { color:#9a6500; }
+.red,.miss { color:#c62818; }
+.play {
+  position:relative; height:280px; overflow:hidden;
+  border:1px solid var(--ko-black);
+  background:var(--ko-panel);
+  box-shadow:4px 4px 0 var(--ko-black);
+}
+.lane { display:flex; height:100%; align-items:center; justify-content:space-around; }
+.hit {
+  height:100%; width:12.5%; border-left:1px solid #b8b5ae;
+  display:flex; flex-direction:column; align-items:center; justify-content:space-around;
+  color:#77736c;
+}
+.hit b { font-size:30px; color:#aaa69e; }
+.hit.active b {
+  color:#fff; background:var(--ko-orange); border-radius:50%;
+  box-shadow:0 0 0 5px var(--ko-amber),0 0 22px var(--ko-orange); padding:10px;
+}
+.target { position:absolute; bottom:0; left:0; right:0; text-align:center; background:var(--ko-black); color:#fff; font-size:10px; padding:7px; font-weight:bold; }
+.target strong { margin-left:20px; color:var(--ko-amber); }
+.pads { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:22px; }
+.pads button {
+  height:100px; background:var(--ko-black); color:#fff; border:1px solid var(--ko-black);
+  text-align:left; padding:12px; cursor:pointer;
+  box-shadow:3px 3px 0 var(--ko-muted);
+}
+.pads button:hover,.pads .kick { background:var(--ko-orange); color:#fff; }
+.pads b { display:block; color:var(--ko-amber); font-size:10px; }
+.pads em { display:block; color:#c4c0b8; font-style:normal; font-size:9px; margin-top:18px; }
+footer { display:flex; justify-content:space-between; color:#65625d; font-size:10px; margin-top:40px; }
+@media(max-width:700px) {
+  main { padding:24px 16px; }
+  header { display:block; }
+  .connect { margin-top:20px; width:100%; }
+  .hud { gap:12px; }
+  .hud .start { width:100%; margin:0; }
+  .pads { grid-template-columns:repeat(2,1fr); }
+  footer { display:grid; gap:8px; }
+}
