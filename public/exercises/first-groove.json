@@ -3,6 +3,7 @@
   "title": "First Groove",
   "bpm": 92,
   "bars": 2,
+  "description": "Kick sur les temps 1 et 3 — garde le groove, laisse respirer le reste.",
   "backingTrack": null,
   "targets": [{"beat":0,"pad":0},{"beat":2,"pad":0},{"beat":4,"pad":0},{"beat":6,"pad":0}],
   "grading": {"perfectMs":20,"goodMs":50}
